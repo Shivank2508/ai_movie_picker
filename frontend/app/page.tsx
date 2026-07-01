@@ -2,8 +2,17 @@
 import MoviePrefrence from "@/components/moviePrefrence";
 import { useState } from "react";
 
+type Movie = {
+  title: string;
+  year: number;
+  genre: string[];
+  cast: string[];
+  reson: string;
+  rating: number;
+};
+
 export default function Home() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
 
   return (
