@@ -3,7 +3,23 @@ import { postMoviePrefrence } from "@/api/api";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-const MoviePrefrence = ({ setMovies, setLoading }) => {
+type Movie = {
+  title: string;
+  year: number;
+  genre: string[];
+  cast: string[];
+  reson: string;
+  rating: number;
+  platform?: string;
+};
+type MoviePreferenceProps = {
+  setMovies: React.Dispatch<React.SetStateAction<Movie[]>>;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+};
+const MoviePrefrence = ({
+  setMovies,
+  setLoading,
+}: MoviePreferenceProps) => {
     const validationSchema = Yup.object({
         genre: Yup.string().required("Genre is required"),
         mood: Yup.string().required("Mood is required"),
