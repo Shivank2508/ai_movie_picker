@@ -9,6 +9,7 @@ type Movie = {
   cast: string[];
   reson: string;
   rating: number;
+  platform?: string;
 };
 
 export default function Home() {
