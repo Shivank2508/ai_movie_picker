@@ -7,25 +7,25 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <main className=" bg-gradient-to-br from-black via-zinc-950 to-red-950 text-white px-8 py-8 relative overflow-hidden">
+    <main className=" bg-gradient-to-br from-black via-zinc-950 to-red-950 text-white px-8 py-4 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-red-500/20 blur-[140px] rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/20 blur-[140px] rounded-full"></div>
 
       {/* Hero Section */}
-      <div className="relative z-10 text-center mb-14">
+      <div className="relative z-10 text-center mb-4">
         <div className="inline-block px-4 py-2 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-sm font-medium mb-5">
           AI Powered Movie Discovery
         </div>
 
-        <h1 className="text-xl md:text-4xl font-extrabold leading-tight max-w-4xl mx-auto">
+        <h1 className="text-xl md:text-3xl font-extrabold leading-tight max-w-3xl mx-auto">
           Find Your Next
           <span className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
             {" "}Favorite Movie
           </span>
         </h1>
 
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-5">
+        <p className="text-gray-400 text-md  my-2">
           Tell us your mood, genre, and vibe. Our AI will analyze your taste
           and recommend movies you'll love instantly.
         </p>
